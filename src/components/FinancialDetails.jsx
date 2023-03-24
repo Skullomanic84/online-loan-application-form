@@ -3,13 +3,14 @@ import InputGroup from "../constant/InputGroup";
 import InputGroupIcon from "../constant/InputGroupIcon";
 import RadioGroupInput from "../constant/RadioGroup"
 import SelectInput from "../constant/SelectInput";
-import { BsSearch } from "react-icons/bs";
+import { BsSearch, BsCalendar3 } from "react-icons/bs";
 import InputIconRight from "../constant/InputIconRight";
 import { BsInfoCircle } from "react-icons/bs";
 
 function FinancialDetails() {
   const [value, setValue] = useState(1);
   const [choice, setChoice] = useState(1);
+   const [selectedDate, setSelectedDate] = useState(new Date());
   
   return (
     <div className="flex flex-col w-full p-5 sm:p-10 space-y-6 justify-center">
@@ -45,6 +46,14 @@ function FinancialDetails() {
           { id: 2, caption: "Part Time" },
           { id: 3, caption: "Contract" },
         ]}
+      />
+
+      {/* employer start date */}
+      <InputIconRight
+        name="startDate"
+        label="Employment start date:"
+        placeholder={"eg. 01 June 2010"}
+        decoration={<BsCalendar3 size="1rem" />}
       />
 
       {/*Bank selection */}
