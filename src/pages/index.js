@@ -34,7 +34,7 @@ export default function Home() {
             Get an instant quote in quick
             <Link
               href="/form"
-              className="text-[#1E9FF2] mb-1 border border-b-4 border-l-0 border-r-0 border-t-0"
+              className="mb-1 border-[#1E9FF2] border-b-4 border-l-0 border-r-0 border-t-0"
             >
               {" "}
               5 steps
